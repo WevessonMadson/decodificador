@@ -65,6 +65,7 @@ main {
     width: 20.5rem;
     padding: 1.5rem 0rem;
     border-radius: 1.5rem;
+    cursor: pointer;
 }
 
 .criptografa {
@@ -132,4 +133,5 @@ main {
     font-size: 1.5rem;
     color: #495057;
     line-height: 150%;
+    text-align: left;
 }
