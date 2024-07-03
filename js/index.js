@@ -6,7 +6,7 @@ function criptografar() {
     let texto = tratarTexto(document.querySelector('textarea').value);
 
     if (texto.length < 3) {
-        alert("Texto muito curto, verifique!")
+        alert("Texto muito curto, verifique!");
         
         return;
     }
@@ -16,6 +16,27 @@ function criptografar() {
     texto = texto.replace(/a/g, 'ai');
     texto = texto.replace(/o/g, 'ober');
     texto = texto.replace(/u/g, 'ufat');
+
+    document.querySelector(".preresultado").style.display = "none";
+    
+    document.querySelector(".posresultado__texto").innerText = texto;
+    document.querySelector(".posresultado").style.display = "flex";
+}
+
+function descriptografar() {
+    let texto = tratarTexto(document.querySelector("textarea").value);
+
+    if (texto.length < 3) {
+        alert("Texto muito curto, verifique!");
+        
+        return;
+    }
+
+    texto = texto.replace(/ufat/g, 'u');    
+    texto = texto.replace(/ober/g, 'o');
+    texto = texto.replace(/ai/g, 'a');
+    texto = texto.replace(/imes/g, 'i');
+    texto = texto.replace(/enter/g, 'e');
 
     document.querySelector(".preresultado").style.display = "none";
     
