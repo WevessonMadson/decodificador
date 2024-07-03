@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/encryption.png" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>Decodificador</title>
+</head>
+<body>
+    <main>
+        <div>
+            <img src="./assets/logo_alura.png" alt="Logo da empresa alura, a letra a.">
+        </div>
+        <section class="decodificador">
+            <textarea type="text" class="decodificador__texto" placeholder="Digite seu texto"></textarea>
+            <div class="decodificador__info">
+                <img src="./assets/info.png" alt="imagem da letra i que significa informação.">
+                <p>Apenas letras minúsculas e sem acento.</p>
+            </div>
+            <div class="decodificador__botoes">
+                <button class="decodificador__botao criptografa">Criptografar</button>
+                <button class="decodificador__botao descriptografa">Descriptografar</button>
+            </div>
+        </section>
+        <section class="resultado">
+            <div class="preresultado">
+                <img src="./assets/procurando.svg" alt="desenho de um boneco com uma lupa, como se estivesse procurando." class="preresultado__imagem">
+                <div class="preresultado__info">
+                    <h2 class="preresultado__subtitulo">Nenhuma mensagem encontrada</h2>
+                    <p class="preresultado__texto">Digite o texto que você deseja criptografar ou descriptografar.</p>
+                </div>
+            </div>
+            <div class="posresultado">
+                <p class="posresultado__texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis nobis expedita, aperiam recusandae eius modi natus iusto rem labore cumque, ipsa velit doloremque molestiae ut suscipit! Voluptate reprehenderit exercitationem totam?</p>
+                <button class="decodificador__botao copia" id="btn_copiar">Copiar</button>
+            </div>
+        </section>
+    </main>
+    <script src="./js/index.js" defer></script>
+</body>
+</html>
