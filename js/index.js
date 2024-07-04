@@ -61,3 +61,29 @@ function copiarResultado() {
         document.querySelector(".copia").innerText = "Copiar";      
     }, 3000)
 }
+
+function toggleMode() {
+    const iconDark = document.querySelector("#button-mode-icon");
+    const html = document.querySelector("html");
+
+    if (iconDark.innerText == "light_mode") {
+        iconDark.innerText = "dark_mode"
+        localStorage.setItem("dark", "light_mode");
+    } else {
+        iconDark.innerText = "light_mode"
+        localStorage.setItem("dark", "dark_mode");
+    }
+    
+    html.classList.toggle("dark-mode");
+}
+
+function loadMode() {
+    let dark = localStorage.getItem("dark") || "light_mode";
+
+    if (dark != "light_mode") {
+        document.querySelector("#button-mode-icon").innerText = "light_mode";
+        document.querySelector("html").classList.toggle("dark-mode");
+    }    
+}
+
+document.addEventListener("DOMContentLoaded", loadMode);
