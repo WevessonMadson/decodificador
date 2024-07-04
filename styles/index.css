@@ -1,5 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
+:root {
+    --body-bg-color: #F3F5FC;
+    --result-bg-color: #FFFFFF;
+    --text-primary-color: #0A3871;
+    --text-secundary-color: #495057;
+    --text-info-color: #495057;
+    --terciary-bg-color: #D8DFE8;
+}
+
+.dark-mode:root {
+    --body-bg-color: #515254;
+    --result-bg-color: #CCCBCB;
+    --text-primary-color: #FFFFFF;
+    --text-secundary-color: #000000;
+    --text-info-color: #FFFFFF;
+    --terciary-bg-color: #949393;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +27,7 @@
 }
 
 body {
-    background-color: #F3F5FC;
+    background-color: var(--body-bg-color);
 }
 
 main {
@@ -35,12 +53,12 @@ main {
     padding: 1.2rem;
     background-color: transparent;
     resize: none;
-    color: #0A3871;
+    color: var(--text-primary-color);
     line-height: 150%;
 }
 
 .decodificador__texto::placeholder {
-    color: #0A3871;
+    color: var(--text-primary-color);
 }
 
 .decodificador__texto:focus {
@@ -51,7 +69,7 @@ main {
     display: flex;
     gap: 0.2rem;
     align-items: center;
-    color: #495057;
+    color: var(--text-info-color);
     font-size: 0.75rem;
 }
 
@@ -75,13 +93,13 @@ main {
 
 .descriptografa,
 .copia {
-    background-color: #D8DFE8;
-    color: #0A3871;
+    background-color: var(--terciary-bg-color);
+    color: var(--text-primary-color);
 }
 
 .resultado {
     width: 25rem;
-    background-color: #FFFFFF;
+    background-color: var(--result-bg-color);
     border-radius: 2rem;
 }
 
@@ -131,7 +149,7 @@ main {
 
 .posresultado__texto {
     font-size: 1.5rem;
-    color: #495057;
+    color: var(--text-secundary-color);
     line-height: 150%;
     text-align: left;
 }
@@ -139,7 +157,21 @@ main {
 footer {
     width: 100vw;
     text-align: center;
-    background-color: #D8DFE8;
+    background-color: var(--terciary-bg-color);
     height: 5vh;
     line-height: 5vh;
+    color: var(--text-primary-color);
 }
+
+#button-mode {
+    width: 120px;
+    border: none;
+    padding: auto;
+    color: var(--text-primary-color);
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#button-mode-icon {
+    font-size: 4rem;
+}    
