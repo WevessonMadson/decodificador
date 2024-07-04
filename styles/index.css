@@ -14,7 +14,7 @@ body {
 
 main {
     width: 100vw;
-    height: 100vh;
+    height: 95vh;
     display: flex;
     padding: 2.5rem;
     justify-content: space-between;
@@ -134,4 +134,12 @@ main {
     color: #495057;
     line-height: 150%;
     text-align: left;
+}
+
+footer {
+    width: 100vw;
+    text-align: center;
+    background-color: #D8DFE8;
+    height: 5vh;
+    line-height: 5vh;
 }
